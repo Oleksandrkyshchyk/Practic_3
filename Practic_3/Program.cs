@@ -10,6 +10,7 @@ class Program
 
         Console.WriteLine("Initial array: " + string.Join(", ", A));
 
+        // Заповнюємо масив випадковими значеннями
         int lastOddIndex = FindLastOddIndex(A);
 
         if (lastOddIndex != -1)

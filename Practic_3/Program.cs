@@ -2,8 +2,10 @@
 
 class Program
 {
+    // Головна програма
     static void Main()
     {
+        // Отримуємо розмір масиву від користувача
         int size = GetValidSize();
         int[] A = new int[size];
         FillArray(A);
@@ -25,7 +27,7 @@ class Program
 
         Console.WriteLine("Updated array: " + string.Join(", ", A));
     }
-
+    //Метод
     static int FindLastOddIndex(int[] array) //Знаходження останнього непарного елемента
     {
         for (int i = array.Length - 1; i >= 0; i--)
@@ -38,6 +40,8 @@ class Program
         return -1;
     }
 
+    // Метод для модифікації масиву:
+    // додає від 1 до 10 нових елементів після останнього непарного елемента
     static void ModifyArray(ref int[] array, int lastOddIndex) //Зміна масиву 
     {
         Random rand = new Random();
@@ -53,6 +57,9 @@ class Program
         }
     }
 
+
+    // Метод для запиту у користувача правильного розміру масиву
+
     static int GetValidSize() //Отримання розміру масиву
     {
         int size;
@@ -64,10 +71,11 @@ class Program
                 Console.WriteLine("Invalid input, please enter a positive integer greater than 0.");
                 continue;
             }
+
             return size;
         }
     }
-
+    //Метод 
     static void FillArray(int[] array) //Заповнення масиву
     {
         Random rand = new Random();
